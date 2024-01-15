@@ -120,3 +120,77 @@ bandit10@bandit:~$ cat data.txt
 VGhlIHBhc3N3b3JkIGlzIDZ6UGV6aUxkUjJSS05kTllGTmI2blZDS3pwaGxYSEJNCg==
 bandit10@bandit:~$ cat data.txt | base64 -d
 The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+11.
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi
+bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed
+
+bandit12@bandit:~$ cd /tmp/naram
+bandit12@bandit:~$ xxd -r data.txt > /tmp/naram/data
+bandit12@bandit:~$ cd /tmp/naram
+bandit12@bandit:/tmp/naram$ ls
+data
+bandit12@bandit:/tmp/naram$ file data
+data: gzip compressed data, was "data2.bin"
+bandit12@bandit:/tmp/naram$ mv data data.gz
+bandit12@bandit:/tmp/naram$ gzip -d data.gz
+bandit12@bandit:/tmp/naram$ ls
+data
+bandit12@bandit:/tmp/naram$ file data
+data: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/naram$ mv data data.bz
+bandit12@bandit:/tmp/naram$ bzip2 -d data.bz
+bandit12@bandit:/tmp/naram$ ls
+data
+bandit12@bandit:/tmp/naram$ file data
+data: gzip compressed data, was "data4.bin"
+bandit12@bandit:/tmp/naram$ mv data data.gz
+bandit12@bandit:/tmp/naram$ gzip -d data.gz
+bandit12@bandit:/tmp/naram$ ls
+data
+bandit12@bandit:/tmp/naram$ file data
+data: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/naram$ tar -xf data
+bandit12@bandit:/tmp/naram$ ls
+data  data5.bin
+bandit12@bandit:/tmp/naram$ file data
+data: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/naram$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/naram$ tar -xf data
+bandit12@bandit:/tmp/naram$ ls
+data  data5.bin
+bandit12@bandit:/tmp/naram$ tar -xf data5.bin
+bandit12@bandit:/tmp/naram$ ls
+data  data5.bin  data6.bin
+bandit12@bandit:/tmp/naram$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/naram$ mv data6.bin data6.bz2
+bandit12@bandit:/tmp/naram$ bzip2 -d data6.bz2
+bandit12@bandit:/tmp/naram$ ls
+data  data5.bin  data6
+bandit12@bandit:/tmp/naram$ file data6
+data6: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/naram$ rm data
+bandit12@bandit:/tmp/naram$ rm data5.bin
+bandit12@bandit:/tmp/naram$ ls
+data6
+bandit12@bandit:/tmp/naram$ tar -xf data6
+bandit12@bandit:/tmp/naram$ ls
+data6  data8.bin
+bandit12@bandit:/tmp/naram$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Oct  5 06:19:20 2023, max compression, from Unix, original size modulo 2^32 49
+bandit12@bandit:/tmp/naram$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/naram$ gzip -d data8.gz
+bandit12@bandit:/tmp/naram$ ls
+data6  data8
+bandit12@bandit:/tmp/naram$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/naram$ cat data8
+The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
