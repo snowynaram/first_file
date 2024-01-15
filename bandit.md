@@ -129,6 +129,14 @@ Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi
 bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
+12.
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf WIAOOSFzMjXXBC0KoSKBbJ8puQm5lIEi
+bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
 The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed
 
 bandit12@bandit:~$ cd /tmp/naram
