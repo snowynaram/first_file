@@ -1,9 +1,7 @@
-const player = {
-     name: "naram",
-     points: 10,
-     fat : true,
-};
-console.log(player);
-console.log(player.name);
-player.birth = 991226;
-console.log(player);
+//function 을 치고 함수를 지정해주면 앞으로 치는 모든 지정된 언어는 함수로 들어간다.
+//plus라고 친후 괄호안에 넣는 함수를 추후에 지정가능
+function plus(a, b){
+     console .log(a,"+",b, "=",a+b);
+}
+//4,5를 지정해줘서 위에 계산기에 들어갈수있게 함
+plus(4,5)
