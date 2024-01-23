@@ -28,3 +28,36 @@ function plus(a, b){
 }
 //4,5를 지정해줘서 위에 계산기에 들어갈수있게 함
 plus(4,5)
+
+//consy 안에 함수를 넣을때 형태가 다름
+const player = {
+     sayHello: function (name){
+          console. log("hello" + name);
+     },
+    
+    
+};
+
+player. sayHello("kotte");
+player. sayHello("naram");
+
+//간단계산기 만들기
+const calculator ={
+     plus : function (a,b){
+          console. log(a+b);
+     },
+     minus : function (a,b){
+          console. log(a-b);
+     },
+     devide : function (a,b){
+          console. log(a/b);
+     },
+     powerOf : function (a){
+          console. log(a*a);
+     },
+}
+
+calculator. plus(5,6);
+calculator. minus(7,5);
+calculator. devide(15,3);
+calculator. powerOf(3);
