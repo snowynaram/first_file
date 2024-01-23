@@ -61,3 +61,21 @@ calculator. plus(5,6);
 calculator. minus(7,5);
 calculator. devide(15,3);
 calculator. powerOf(3);
+
+
+// return 을 이용하면 계산값을 새롭게 정의가 가능함.
+let age = 24;
+function calculateKAge(ageOfForeigner){
+     return ageOfForeigner + 2;
+}
+
+const krAge = calculateKAge(age);
+
+console.log(krAge);
+
+age = 26;
+const newage = calculateKAge(age);
+console.log(newage);
+
+const plusage = newage + krAge;
+console.log(plusage);
