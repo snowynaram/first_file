@@ -1,19 +1,15 @@
-const calculator ={
-     plus : function (a,b){
-          console. log(a+b);
-     },
-     minus : function (a,b){
-          console. log(a-b);
-     },
-     devide : function (a,b){
-          console. log(a/b);
-     },
-     powerOf : function (a){
-          console. log(a*a);
-     },
+let age = 24;
+function calculateKAge(ageOfForeigner){
+     return ageOfForeigner + 2;
 }
 
-calculator. plus(5,6);
-calculator. minus(7,5);
-calculator. devide(15,3);
-calculator. powerOf(3);
+const krAge = calculateKAge(age);
+
+console.log(krAge);
+
+age = 26;
+const newage = calculateKAge(age);
+console.log(newage);
+
+const plusage = newage + krAge;
+console.log(plusage);
