@@ -93,13 +93,15 @@ const age = parseInt(prompt("나이를 입력하시오"));
 console.log(isNaN(age));  
 
 //if하고 처음나오는게 true일때의 출력할것 else다음에 나오는게 false일때 나오는 값
-
+//여러 조건문일때는 else if를 사용한다.
 if(isNaN(age)){
 
     alert("숫자를 입력하세요");
 
-}else{
+}else if (age < 18){
 
-     alert("잘햇어요");
+     alert("너무어려요");
 
+}else {
+     alert("술을 마셔요!")
 }
