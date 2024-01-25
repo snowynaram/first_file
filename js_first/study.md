@@ -79,3 +79,27 @@ console.log(newage);
 
 const plusage = newage + krAge;
 console.log(plusage);
+
+
+
+const age = prompt("나이를 입력하시오");
+//typeof @@ = @@의 데이터 타입을 알아볼수있음
+console.log(typeof age);  
+
+
+//parseInt는 string을 number로바꿔준다.
+const age = parseInt(prompt("나이를 입력하시오"));
+//isNaN false=number, true=NaN
+console.log(isNaN(age));  
+
+//if하고 처음나오는게 true일때의 출력할것 else다음에 나오는게 false일때 나오는 값
+
+if(isNaN(age)){
+
+    alert("숫자를 입력하세요");
+
+}else{
+
+     alert("잘햇어요");
+
+}
