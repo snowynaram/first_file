@@ -94,14 +94,23 @@ console.log(isNaN(age));
 
 //if하고 처음나오는게 true일때의 출력할것 else다음에 나오는게 false일때 나오는 값
 //여러 조건문일때는 else if를 사용한다.
+//&&=and ||=or
+//else를 꼭써야하는건 아님
+//true || true === true
+//true || false === true
+//false || true === true
+//false || false === false
+// true && true === true
+//false && true === false
+// true && false === false
+//false && false === false
+
 if(isNaN(age)){
-
     alert("숫자를 입력하세요");
-
-}else if (age < 18){
-
+} else if (age < 18){
      alert("너무어려요");
-
-}else {
-     alert("술을 마셔요!")
+} else if (age >= 18 && age <= 50){
+     alert ("술을 마음껏마셔요!");
+} else {
+     alert("그만마셔")
 }

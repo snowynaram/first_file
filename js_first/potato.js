@@ -4,8 +4,8 @@ const age = parseInt(prompt("나이를 입력하시오"));
 console.log(isNaN(age));  
 
 //&&=and ||=or
-if(isNaN(age)){
-    alert("숫자를 입력하세요");
+if(isNaN(age) || age < 0){
+    alert("알맞은 나이를 입력하세요");
 } else if (age < 18){
      alert("너무어려요");
 } else if (age >= 18 && age <= 50){
