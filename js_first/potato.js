@@ -1,15 +1,6 @@
-//parseInt는 string을 number로바꿔준다.
-const age = parseInt(prompt("나이를 입력하시오"));
-//isNaN false=number, true=NaN
-console.log(isNaN(age));  
+const title = document.getElementById("title");
 
-//&&=and ||=or
-if(isNaN(age) || age < 0){
-    alert("알맞은 나이를 입력하세요");
-} else if (age < 18){
-     alert("너무어려요");
-} else if (age >= 18 && age <= 50){
-     alert ("술을 마음껏마셔요!");
-} else {
-     alert("그만마셔")
-}
+title.innerText = "Got you bitch"
+
+console.log(title.id);
+console.log(title.className);

@@ -114,3 +114,16 @@ if(isNaN(age)){
 } else {
      alert("그만마셔")
 }
+
+
+//document.title = "@@"  콘솔안에서 제목을 @@으로 바꿀수있음
+
+
+// html 코드와 element를 자바스크립트로 접근하는 방법
+//title을 정의하고 가져오거나 바꾸고있음
+const title = document.getElementById("title");
+
+title.innerText = "Got you bitch"
+
+console.log(title.id);
+console.log(title.className);
