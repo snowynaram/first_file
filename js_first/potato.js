@@ -34,12 +34,29 @@ function windowonline(){
     alert ("인터넷이 돌아왔다.");
 }
 
+function windowwheel(){
+    alert ("밑에 아무것도 없어영");
+}
+
+function mouseup(){
+    document.body.style.backgroundColor = "white";
+}
+
+function mousedown(){
+    document.body.style.backgroundColor = "orange";
+}
+
 h1.addEventListener("click", handleTitleClick);
 h1.addEventListener("mouseenter", mouseenter);
 h1.addEventListener("mouseleave", mouseleave);
+
 
 
 window.addEventListener("resize", handleresize);
 window.addEventListener("copy", windowCopy);
 window.addEventListener("offline",windowoffline);
 window.addEventListener("online",windowonline);
+window.addEventListener("wheel",windowwheel);
+window.addEventListener("mouseup",mouseup);
+window.addEventListener("mousedown",mousedown);
+////mouseup은 클릭을뗏을때 mousedown은 클릭을 할때
