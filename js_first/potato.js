@@ -1,6 +1,11 @@
-//hello안에 h1을 찾아서 알려줌
-//querySelector은 제일 처음것만 가져와줌 모두가져오고싶을때는 뒤에 All을 붙여주면 된다.
-//querySelector는 매우 중요@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-const title = document.querySelector("div h1");
+//html을 가져오고
+const title = document.querySelector("div.hello:first-child h1");
 
-console.log(title);
+//클릭햇을때 실행하는것
+//색을 blue로 바꿈
+function handleTitleClick(){
+    title.style.color = "blue";
+}
+//addEventListener무슨 이벤트를 "click"클릭이벤트를 handleTitleClick작동시킨다.
+title.addEventListener("click", handleTitleClick);
+
