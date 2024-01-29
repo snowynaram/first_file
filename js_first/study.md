@@ -194,3 +194,30 @@ function handleTitleClick(){
     h1.style.color = newcolor;
 }
 h1.addEventListener("click", handleTitleClick);
+
+
+####css
+
+h1{
+    color : cornflowerblue;
+    //0.5초의 시간을 두고 색이 천천히 변함
+    transition:color 0.5s ease-in-out;
+}
+
+//js와 똑같은 이름이여야함
+.active {
+    color : tomato;
+}
+
+###js
+//clickedClass를 이용하여 작업해야 class에있는 다른 명령어들을 안건들일수있음
+//이 긴 코드를  h1.classList.toggle("active"); 단한줄로 대체 가능
+function handleTitleClick(){
+    const clickedClass = "active"
+    if (h1.classList.contains(clickedClass)) {
+        h1.classList.remove(clickedClass);
+    } else {
+        h1.classList.add(clickedClass);
+    }
+}
+h1.addEventListener("click", handleTitleClick);
