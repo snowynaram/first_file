@@ -153,3 +153,44 @@ function handleTitleClick(){
 }
 //addEventListener무슨 이벤트를 "click"클릭이벤트를 handleTitleClick작동시킨다.
 title.addEventListener("click", handleTitleClick);
+
+
+const title = document.querySelector("div.hello:first-child h1");
+
+console.dir(title);
+function handleTitleClick(){
+    title.style.color = "blue";
+}
+
+function mouseenter(){
+    title.innerText = "mouse is here";
+}
+
+function mouseleave(){
+    title.innerText = "Mouse is gone!";
+    title.style.color = "black";
+}
+
+//click은 클릭할때의 이벤트
+title.addEventListener("click", handleTitleClick);
+//mouseenter은 마우스커서를 위에 올려놓았을때의 이벤트
+title.addEventListener("mouseenter", mouseenter);
+//mouseleave는 마우스 커서가 위에서 사라졌을때 이벤트
+title.addEventListener("mouseleave", mouseleave);
+
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+//뭔가를 반복해서 작동시킬때 코딩법
+//const로 새로운걸 정의하여 let 과함께 이용해서 쓸수있다.
+function handleTitleClick(){
+    const currentcolor = h1.style.color;
+    let newcolor;
+    if(currentcolor === "blue") {
+        newcolor = "tomato";
+    } else {
+        newcolor = "blue";
+    }
+    h1.style.color = newcolor;
+}
+h1.addEventListener("click", handleTitleClick);
