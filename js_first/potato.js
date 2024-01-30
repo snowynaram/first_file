@@ -1,9 +1,14 @@
+const logininput = document.querySelector("#login-form input");
+const loginbutton = document.querySelector("#login-form button");
 
-const h1 = document.querySelector("div.hello:first-child h1");
-
-
-function handleTitleClick(){
-    const clickedClass = "active";
-    h1.classList.toggle("active");
+function onLoginBtnClick(){
+   const name = logininput.value;
+    if(name === ""){
+alert ("이름을 입력하세요");
+    }else{
+        alert ("안녕 "+ logininput.value);
+    }
 }
-h1.addEventListener("click", handleTitleClick);
+
+
+loginbutton.addEventListener("click", onLoginBtnClick);
