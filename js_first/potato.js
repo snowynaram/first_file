@@ -1,19 +1,18 @@
 const loginForm = document.querySelector("#login-form");
 const logininput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link= document.querySelector("a");
-
+const HIDDEN_CLASSNAME = "hidden"
 
 function onLoginSubmit(event){
     event. preventDefault();
-    console.log(logininput.value);
-}
-function handleLinkClick(event) {
-    event.preventDefault()
-    console.dir(event);
-    alert("사이트로 이동합니다!");
+    loginForm.classList.add("hidden");
+    const username = logininput.value;
+    greeting.innerText = `hello ${username}`;
+    greeting.classList.remove("hidden")
 }
 
+
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click",handleLinkClick);
+
 
