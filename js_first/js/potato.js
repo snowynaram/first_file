@@ -8,9 +8,9 @@ const usernamekey = "username"
 function onLoginSubmit(event){
     event. preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = logininput.value;
-    localStorage.setItem(usernamekey, username);
-    paintGreetings(username);
+    const usernamethatuserwrote = logininput.value;
+    localStorage.setItem(usernamekey, usernamethatuserwrote);
+    paintGreetings(usernamethatuserwrote);
 }
 
 function paintGreetings(username) {
@@ -28,5 +28,3 @@ loginForm.addEventListener("submit",onLoginSubmit);
 } else{
 paintGreetings(savedUsername);
 }
-
-
