@@ -48,5 +48,12 @@ const todayQuotes = quotes[Math.floor(Math.random() * quotes.length)];
 console.log(todayQuotes);
 quote.innerText = todayQuotes;
 
+<<<<<<< HEAD
 //quote.innterText = todayQuotes.quote;
 //author.innterText = todayQuotes.author;
+=======
+const todayQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innterText = todayQuotes.quote;
+author.innterText = todayQuotes.author;
+>>>>>>> 3df964b5adaaa85a9d19c40b544cb2be52db054b
