@@ -10,8 +10,10 @@ fetch(url)
     .then(data =>{
         const weather = document.querySelector("#weather span:first-child");
         const location = document.querySelector("#weather span:last-child");
+        const temp = document.querySelector("#temp span:first-child");
         location.innerText = data.name;
         weather.innerText = data.weather[0].main;
+        temp.innerText = data.main.temp;
 });
 
 }
