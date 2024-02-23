@@ -21,7 +21,7 @@ fetch(url)
 
 }
 function onGeoErr(){
-    alert("날씨를 찾을수가 없어요 ㅠ");
+    alert("위치정보를 찾을수가 없습니다");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoErr)
