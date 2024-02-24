@@ -28,15 +28,15 @@ function paintGreetings(username) {
     greeting.innerText = `hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-/*
+
 function passwordfunction(event){
 const passwordyouenter = password.value;
 console.log(passwordyouenter);
+}
 
-}*/
 logout.addEventListener("click",logoutbutton);
 loginForm.addEventListener("submit", onLoginSubmit);
-//password.addEventListener("submit", passwordfunction);
+password.addEventListener("password", passwordfunction);
 
 const savedUsername = localStorage.getItem(usernamekey);
 
